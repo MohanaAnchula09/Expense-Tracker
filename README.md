@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# React Dashboard Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a multi-page React application built while learning modern React development. It combines several mini-projects into a single dashboard application using React Router.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Expense Tracker
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Add expenses
+* Edit expenses
+* Delete expenses
+* Search expenses
+* Filter by category
+* Sort by amount or category
+* Category-wise totals
+* Total expense calculation
+* Data persistence using Local Storage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Movie Search
 
-### `npm test`
+* Search movies using the OMDb API
+* Loading and error handling
+* Movie posters and details display
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Weather App
 
-### `npm run build`
+* Search weather by city
+* Display temperature, humidity, wind speed, and weather conditions
+* API integration with loading and error states
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Navigation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Multi-page routing using React Router
+* Custom 404 page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### State Management
 
-### `npm run eject`
+* React Hooks (`useState`, `useEffect`)
+* Context API
+* Custom Hooks (`useFetch`, `useLocalStorage`)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* React
+* React Router
+* JavaScript (ES6+)
+* HTML
+* CSS
+* Context API
+* Local Storage
+* OMDb API
+* OpenWeather API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+src/
+├── components/
+├── context/
+├── hooks/
+├── pages/
+├── App.js
+└── index.js
 
-## Learn More
+## Learning Outcomes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Through this project I practiced:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Component-based architecture
+* State management
+* API integration
+* Custom Hooks
+* Context API
+* Routing
+* CRUD operations
+* Local Storage persistence
+* Error handling and validation
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Redux Toolkit integration
+* Dark/Light theme
+* Responsive design
+* Authentication
+* Dashboard analytics
+* Improved UI/UX
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Mohana while learning React and modern frontend development.
