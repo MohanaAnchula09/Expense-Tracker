@@ -30,6 +30,24 @@ This project is a multi-page React application built while learning modern React
 * Display temperature, humidity, wind speed, and weather conditions
 * API integration with loading and error states
 
+## Screenshots
+
+### Home Page
+
+![Home](./screenshots/home.png)
+
+### Expense Tracker
+
+![Expenses](./screenshots/expenses.png)
+
+### Movie Search
+
+![Movies](./screenshots/movies.png)
+
+### Weather App
+
+![Weather](./screenshots/weather.png)
+
 ### Navigation
 
 * Multi-page routing using React Router
