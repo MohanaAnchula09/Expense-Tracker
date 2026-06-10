@@ -7,11 +7,11 @@ const Weather = () =>{
     const [city, setCity] = useState("");
     const [searchCity, setSearchCity] = useState("");
 
-    const apiKey = "686a476e03cb00c58305f76f8a5ec308";
+    const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
     const url = searchCity
-      ? `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-      : null;
+    ? `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${WEATHER_API_KEY}&units=metric`
+    : null;
     const {data,loading,error} = useFetch(url);
 
     const handleSubmit = (e) =>{

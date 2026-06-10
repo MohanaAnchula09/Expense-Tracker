@@ -5,8 +5,9 @@ const MovieSearch = () => {
   const [query, setQuery] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  const OMDB_API_KEY = process.env.REACT_APP_OMDB_API_KEY;
   const url = searchTerm
-    ? `https://www.omdbapi.com/?apikey=6b73a256&s=${searchTerm}`
+    ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${searchTerm}`
     : null;
 
   const { data, loading, error } = useFetch(url);
