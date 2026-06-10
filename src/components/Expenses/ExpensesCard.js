@@ -1,6 +1,6 @@
 function ExpenseCard({ expense, onDelete, onEdit }) {
     return (
-      <div>
+      <div className="card">
         <h3>{expense.title}</h3>
         <p>₹{expense.amount}</p>
         <p>{expense.category}</p>

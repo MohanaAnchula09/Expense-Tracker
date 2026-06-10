@@ -22,7 +22,7 @@ const MovieSearch = () => {
   };
 
   return (
-    <div>
+    <div className="card">
       <h1>Movie Search App</h1>
 
       <form onSubmit={handleSubmit}>

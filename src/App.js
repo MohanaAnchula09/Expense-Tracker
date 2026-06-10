@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/NavBar";
 import Movies from "./pages/Movies";
 import Weather from "./pages/Weather";
+import "./App.css";
 
 function App() {
   return (

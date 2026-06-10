@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+  }
+  
+  .App {
+    min-height: 100vh;
+  }
+  
+  nav {
+    background: #222;
+    padding: 16px;
+  }
+  
+  nav a {
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  form,
+  .card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  input,
+  select,
+  button {
+    padding: 10px;
+    margin: 6px;
+  }
