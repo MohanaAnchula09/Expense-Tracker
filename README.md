@@ -34,19 +34,19 @@ This project is a multi-page React application built while learning modern React
 
 ### Home Page
 
-![Home](./screenshots/home.png)
+![Home](./Screenshots/home.png)
 
 ### Expense Tracker
 
-![Expenses](./screenshots/expenses.png)
+![Expenses](./Screenshots/expenses.png)
 
 ### Movie Search
 
-![Movies](./screenshots/movies.png)
+![Movies](./Screenshots/movies.png)
 
 ### Weather App
 
-![Weather](./screenshots/weather.png)
+![Weather](./Screenshots/weather.png)
 
 ### Navigation
 
