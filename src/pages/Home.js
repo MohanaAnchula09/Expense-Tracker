@@ -1,11 +1,10 @@
-// pages/Home.jsx
-
 function Home() {
-    return (
-      <div>
-        <h1>My React Projects</h1>
-      </div>
-    );
-  }
-  
-  export default Home;
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <p>Anyone can access this page.</p>
+    </div>
+  );
+}
+
+export default Home;

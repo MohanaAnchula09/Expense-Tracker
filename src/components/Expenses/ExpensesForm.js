@@ -1,6 +1,11 @@
 import { useState } from "react";
 import ExpenseList from "./ExpensesList";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addExpense,
+  deleteExpense,
+  editExpense,
+} from "../redux/expenseSlice";
 
 const ExpensesForm = () => {
   const [title, setTitle] = useState("");
@@ -12,7 +17,11 @@ const ExpensesForm = () => {
   const [editingId, setEditingId] = useState(null);
   const [formError, setFormError] = useState("");
 
-  const [expenses, setExpenses] = useLocalStorage("expenses", []);
+  const expenses = useSelector(
+    (state) => state.expenses.expenses
+  );
+  
+  const dispatch = useDispatch();
 
 
   const handleEdit = (expense) => {
@@ -44,19 +53,15 @@ const ExpensesForm = () => {
     setFormError("");
   
     if (editingId) {
-      setExpenses((prev) =>
-        prev.map((expense) =>
-          expense.id === editingId
-            ? {
-                ...expense,
-                title,
-                amount: Number(amount),
-                category,
-              }
-            : expense
-        )
+      dispatch(
+        editExpense({
+          id: editingId,
+          title,
+          amount: Number(amount),
+          category,
+        })
       );
-  
+    
       setEditingId(null);
     } else {
       const newExpense = {
@@ -65,8 +70,8 @@ const ExpensesForm = () => {
         amount: Number(amount),
         category,
       };
-  
-      setExpenses((prev) => [...prev, newExpense]);
+    
+      dispatch(addExpense(newExpense));
     }
   
     setTitle("");
@@ -74,8 +79,8 @@ const ExpensesForm = () => {
     setCategory("");
   };
 
-  const deleteExpense = (id) => {
-    setExpenses((prev) => prev.filter((expense) => expense.id !== id));
+  const handleDeleteExpense = (id) => {
+    dispatch(deleteExpense(id));
   };
 
       let displayedExpenses = expenses.filter((expense) =>
@@ -175,7 +180,7 @@ const ExpensesForm = () => {
 
           <ExpenseList
             expenses={displayedExpenses}
-            onDelete={deleteExpense}
+            onDelete={handleDeleteExpense}
             onEdit={handleEdit}
           />
 
