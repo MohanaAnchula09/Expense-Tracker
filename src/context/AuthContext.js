@@ -7,21 +7,39 @@ export function AuthProvider({ children }) {
     JSON.parse(localStorage.getItem("user")) || null
   );
 
-  const login = (email, password) => {
-    if (email === "test@gmail.com" && password === "123456") {
-      const userData = {
-        name: "Mohana",
-        email,
-        token: "fake-jwt-token",
-      };
-
-      localStorage.setItem("user", JSON.stringify(userData));
-      setUser(userData);
-
-      return true;
+  const login = async (username, password) => {
+    try {
+      const response = await fetch("https://fakestoreapi.com/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (data.token) {
+        const userData = {
+          username,
+          token: data.token,
+          role: username === "mor_2314" ? "admin" : "user",
+        };
+      
+        localStorage.setItem("user", JSON.stringify(userData));
+        setUser(userData);
+      
+        return true;
+      }
+  
+      return false;
+    } catch (error) {
+      console.log(error);
+      return false;
     }
-
-    return false;
   };
 
   const logout = () => {

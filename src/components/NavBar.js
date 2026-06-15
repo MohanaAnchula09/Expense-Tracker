@@ -35,6 +35,11 @@ function Navbar() {
       <Link to="/">Home</Link>
 
       {user && <Link to="/dashboard">Dashboard</Link>}
+      {user && <Link to="/posts-rtk">Posts RTK</Link>}
+      {user?.role === "admin" && (
+        <Link to="/admin">Admin</Link>
+      )}
+      {user && <Link to="/protected-data">Protected Data</Link>}
 
       {!user ? (
         <Link to="/login">Login</Link>

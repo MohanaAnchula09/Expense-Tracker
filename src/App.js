@@ -45,12 +45,16 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Admin from "./pages/Admin";
+import RoleProtectedRoute from "./components/RoleProtectedRoute";
+import ProtectedData from "./pages/ProtectedData";
+import PostsRTK from "./components/PostsRTK";
 function App() {
   return (
     <BrowserRouter>
     <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
+     {/* <Routes>
+     <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
 
@@ -62,7 +66,30 @@ function App() {
             </ProtectedRoute>
           }
         />
-      </Routes>
+        <Route
+        path="/admin"
+        element={
+          <RoleProtectedRoute allowedRole="admin">
+            <Admin />
+          </RoleProtectedRoute>
+        }
+      />
+      <Route
+      path="/protected-data"
+      element={
+        <ProtectedRoute>
+          <ProtectedData />
+        </ProtectedRoute>
+      }
+    />
+      </Routes> */}
+      <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/admin" element={<Admin />} />
+    <Route path="/posts-rtk" element={<PostsRTK />} />
+  </Routes>
     </BrowserRouter>
   );
 }

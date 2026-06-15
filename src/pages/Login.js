@@ -3,21 +3,21 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const success = login(email, password);
+    const success = await login(username, password);
   
     if (success) {
       navigate("/dashboard");
     } else {
-      alert("Invalid email or password");
+      alert("Invalid username or password");
     }
   };
 
@@ -26,11 +26,11 @@ function Login() {
       <h1>Login</h1>
 
       <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         />
 
         <input

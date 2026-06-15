@@ -13,8 +13,9 @@ function Dashboard() {
     <div>
       <h1>Dashboard</h1>
 
-        <p>Name: {user?.name}</p>
-        <p>Email: {user?.email}</p>
+      <p>Username: {user?.username}</p>
+      <p>Token: {user?.token}</p>
+      <p>Token Length: {user?.token.length}</p>
 
       <button onClick={handleLogout}>Logout</button>
     </div>
